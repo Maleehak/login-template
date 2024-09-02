@@ -33,7 +33,7 @@ Registration and Login with React and Springboot
 
 ## Features
 1. Custom Login and Registraion
-2. Login with Google
+2. OAuth2 Login with Google
 3. Email Notification Generation on Custom Signup/Login using Java Mail Sender
 4. Customizable Email Template
 5. Phone notification on custom Signup/Login using Twilio
