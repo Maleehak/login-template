@@ -20,7 +20,7 @@ const [loginError, setLoginError] = useState('');
 
   useScript('https://accounts.google.com/gsi/client', () => {
     window.google.accounts.id.initialize({
-      client_id: "1033211074754-150piajp0bsrb4i6vjqr4llap2v39jil.apps.googleusercontent.com",
+      client_id: "<CLIENT_ID>",
       callback: onGoogleSignIn,
     });
     window.google.accounts.id.renderButton(
