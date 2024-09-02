@@ -94,7 +94,7 @@ Here's how OAuth2 flow works:
 _Below is an example of how you can setup the project locally._
 
 ### Before you start
-This project contains two third party integrations. You need to gnerate the relevant API keys and add them in the project 
+This project contains third party integrations. You need to gnerate the relevant API keys and add them in the project 
 
 #### Google Signin
 
