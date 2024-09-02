@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="1-1-create-notification-template-table" author="maleehakhalid">
+        <sql>
+            CREATE TABLE IF NOT EXISTS notification_template(
+            id bigserial NOT NULL,
+            template_type varchar(255) NULL,
+            email_title varchar(255) NULL,
+            email_body text NULL,
+            email_enabled bool NULL,
+            sms_title text NULL,
+            sms_body text NULL,
+            sms_enabled bool NULL
+            );
+        </sql>
+    </changeSet>
+    <changeSet id="1-2-add-notification-templates-for-login-and-registration" author="maleehakhalid">
+        <sql>
+            INSERT INTO public.notification_template(template_type, email_title, email_body, email_enabled, sms_title, sms_body, sms_enabled)
+            VALUES('LOGIN', 'Successfully Logged-in', 'This is to inform you that you have successfully logged into your account', true, 'Successfully Logged-in',
+            'This is to inform you that you have successfully logged into your account', true);
+
+            INSERT INTO public.notification_template(template_type, email_title, email_body, email_enabled, sms_title, sms_body, sms_enabled)
+            VALUES('REGISTRATION', 'Registration completed', 'This is to inform you that you have successfully registered', true, 'ACTION REQUIRED: Registration completed',
+            'Please go to your email to complete your registration', true);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
